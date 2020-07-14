@@ -1,0 +1,5 @@
+1.0.1: First version of Parser
+1.0.2:
+  - create_parsers_table.php
+1.0.3: Добавили пагинацию
+  - create_parsers_table.php

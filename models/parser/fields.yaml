@@ -1,0 +1,112 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+    name:
+        label: Название
+        type: text
+        size: small
+        span: left
+
+    link:
+        label: Ссылка
+        type: text
+        size: small
+        span: right
+        required: true
+
+    pagination:
+        label: Пагинация
+        type: text
+        cssClass: w-sm
+
+    from:
+        label: Первая страница
+        type: text
+        cssClass: w-sm m-l
+
+    to:
+        label: Последняя страница
+        type: text
+        cssClass: w-sm m-l
+
+    base_params:
+        label: Основная настройка
+        type: repeater
+        prompt: Добавить настройку
+        maxItems: 1
+        size: small
+        span: right
+        form:
+            fields:
+                name:
+                    label: Название
+                    type: text
+                type:
+                    label: Тип
+                    type: dropdown
+                    options:
+                        CSS: Css
+                        XPATH: XPath
+                regexp:
+                    label: Регулярное выражение
+                    type: text
+
+                relative:
+                    label: Относительный путь
+                    type: switch
+
+                relative_path:
+                    label: Домен
+                    type: text
+                    trigger:
+                        action: show
+                        field: relative
+                        condition: 'checked'
+
+
+    params:
+        label: Параметры
+        type: repeater
+        prompt: Добавить настройку
+        form:
+            fields:
+                name:
+                    label: Название
+                    type: text
+                type:
+                    label: Тип
+                    type: dropdown
+                    options:
+                        CSS: Css
+                        XPATH: XPath
+                regexp:
+                    label: Регулярное выражение
+                    type: text
+
+                subtask:
+                    label: Подзадача
+                    type: repeater
+                    maxItems: 2
+                    prompt: Добавить подзадачу
+                    form:
+                        fields:
+                            name:
+                                label: Название
+                                type: text
+                            type:
+                                label: Тип
+                                type: dropdown
+                                options:
+                                    CSS: Css
+                                    XPATH: XPath
+                            regexp:
+                                label: Регулярное выражение
+                                type: text
+

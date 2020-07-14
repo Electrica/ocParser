@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Parser
+
+# Model Form Field configuration
+form: $/electrica/parser/models/parser/fields.yaml
+
+# Model Class name
+modelClass: Electrica\Parser\Models\Parser
+
+# Default redirect location
+defaultRedirect: electrica/parser/parser
+
+# Create page
+create:
+    title: Create Parser
+    redirect: electrica/parser/parser/update/:id
+    redirectClose: electrica/parser/parser
+
+# Update page
+update:
+    title: Edit Parser
+    redirect: electrica/parser/parser
+    redirectClose: electrica/parser/parser
+
+# Preview page
+preview:
+    title: Preview Parser

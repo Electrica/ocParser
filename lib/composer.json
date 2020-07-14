@@ -1,0 +1,6 @@
+{
+    "require": {
+        "imangazaliev/didom": "^1.16",
+        "phpoffice/phpspreadsheet": "^1.13"
+    }
+}
